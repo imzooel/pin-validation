@@ -5,10 +5,12 @@ body {
     background: #10101B;
     height: 100vh;
 }
+.col-md-6 {
+    padding-top: 15px;
+}
 .container {
     margin-top: 30px;
 }
-
 .half-width {
     height: 570px;
     background: #222436;
