@@ -40,13 +40,23 @@ function displayMatchResult(correctStatus, inCorrectStatus) {
     inCorrect.style.display = inCorrectStatus;
 }
 // verify Pin 
+let flag = 1;
 function verifyPin() {
     const pin = document.getElementById("pin").value;
     const typedPin = document.getElementById("typed-pin").value;
     if (pin === typedPin) {
-        displayMatchResult("block", "none")
+        displayMatchResult("block", "none");
     }
     else {
-        displayMatchResult("none", "block")
+        flag++;
+        if (flag <= 3) {
+            displayMatchResult("none", "block");
+            document.getElementById("num-Of-Try").innerText = (4 - flag);
+        }
+        else{
+            document.getElementById("attempts").style.display= "none";
+            document.getElementById("incorrect-pin").style.display= "none";
+            alert("NO ATTEMPTS LEFT. RELOAD THE PAGE!");
+        }
     }
 }
