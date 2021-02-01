@@ -16,7 +16,7 @@ function generatePin() {
     pinInput.value = getPin();
     //whenever Generate button is pressed it will also empty TypedPIN input + reset attempts number
     document.getElementById("typed-pin").value = "";
-    flag = 1;
+//     flag = 1;
 
 
 }
